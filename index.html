@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Smorgasbord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="media-queries.css">
+
+</head>
+
+<body><script src="/superhi.js"></script>
+
+  <section class="side-panel">
+    <div>
+      <h1>smorgasbord</h1>
+    </div>
+    <div class="text">
+      <h2 class="description">Welcome to my code snippet playground.</h2>
+    </div>
+    <div class="label copyright">
+        <p>© Sophie Hall,
+          <!-- This script dynamically updates the year -->
+          <script type="text/javascript">
+            document.write(new Date().getFullYear());
+          </script>
+        </p>
+      </div>
+  </section>
+
+  <section class="grid-container">
+    <div class="grid">
+      <div class="grid-item grid-item--width1 grid-item--height3">
+        <section class="rainbow">
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <p class="label">rainbow</p>
+      </div>
+
+      <div class="grid-item grid-item--height2">
+        <a href="https://canvas-test-002.superhi.com">
+          <div class="html-canvas">
+            <img src="html-canvas.jpg">
+            <p class="label">HTML canvas</p>
+        </a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <div class="lines">
+          <div class="row">
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+            <div class="line-wrapper">
+              <div class="line"></div>
+            </div>
+          </div>
+          <p class="label">rotating lines</p>
+        </div>
+      </div>
+
+      <div class="grid-item grid-item--height2">
+        <div class="drip"></div>
+
+        <!-- SVG filters -->
+        <svg class="filters" xmlns="http://www.w3.org/2000/svg" version="1.1">
+          <defs>
+            <filter id="goo">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+              <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+          </defs>
+        </svg>
+        <!-- <p class="label">slow drip</p> -->
+      </div>
+
+      <div class="grid-item grid-item--height3">
+        <div class="blobs-bg">
+        <div class="whispir-blobs">
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <g class="red-blob-thumb" transform="translate(200,400)">
+              <path d="M324.363312,140.272792 C324.363312,212.900454 260.05562,301.972814 179.183825,304.895104 C106.584338,307.518346 20.3633117,280.542691 20.3633117,213.330031 C20.3633117,140.702368 35.9530553,94.4902549 110.978697,79.8788073 C182.285209,65.9911131 324.363312,67.645129 324.363312,140.272792" fill="#FF2942" >
+            </g>
+          </svg>
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <g class="green-blob-thumb" fill="#12DB82" fill-rule="nonzero">
+                <path d="M293.4,118.9 C318.6,162.8 337.8,193.9 357,244.2 C376.2,294.5 395.4,364.1 370.2,410.2 C345.1,456.4 275.5,479.2 214.8,470.4 C154.1,461.5 102.3,421 65,374.9 C27.6,328.7 4.8,276.9 0.7,220.9 C-3.4,164.9 11.1,104.8 48.5,61 C85.8,17.1 145.9,-10.4 191.5,4.1 C237.1,18.6 268.2,75.1 293.4,118.9 Z">
+            </g>
+          </svg>
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <g class="yellow-blob-thumb" fill="#FDC602" fill-rule="nonzero">
+              <path d="M0,93.7073519 C0,156.995599 44.5337364,236.3 107.764024,236.3 L107.764024,236.3 C171.001237,236.3 252,156.995599 252,93.7073519 L252,93.7073519 C252,30.3844458 171.035866,0.3 107.764024,0.3 L107.764024,0.3 C44.4991068,0.3 0,30.4191053 0,93.7073519 L0,93.7073519 Z">
+            </g>
+          </svg>
+          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <g class="orange-blob-thumb" transform="translate(300,300)">
+              <path d="M170.563237,49.2839177 C191.580104,82.9364554 192.744474,130.819876 172.309791,157.007032 C151.875108,183.252512 109.899591,187.685082 78.5198352,181.561137 C47.1982982,175.378868 26.5307413,158.523438 13.489804,136.652204 C0.448866627,114.722648 -4.90723263,87.6606418 5.45565506,60.248696 C15.7603243,32.778427 41.8421989,4.84157162 75.2596008,0.583971536 C108.677003,-3.67362855 149.546369,15.6313801 170.563237,49.2839177 Z" fill="#ff6c31">
+              </g>
+          </svg>
+        </div>   
+      </div>
+          <p class="label">Blobs</p>
+      </div>
+
+      <div class="grid-item grid-item--height2">
+        <div class="spinning-square-area">
+          <div class="spinning-square"></div>
+        </div>
+        <p class="label">Spinning square</p>
+      </div>
+
+      <div class="grid-item grid-item--height2">
+        <div class="clock-bg">
+          <div class="clock clock-melbourne">
+            <div class="hand second"></div>
+            <div class="hand minute"></div>
+            <div class="hand hour"></div>
+          </div>
+        </div>
+          <p class="label">Melbourne Clock</p>
+      </div>
+
+
+<!--  <div class="grid-item grid-item--width1 grid-item--height2"></div>
+      <div class="grid-item grid-item--width1"></div>
+      <div class="grid-item grid-item--width1"></div>
+      <div class="grid-item grid-item--height3"></div>
+      <div class="grid-item grid-item--height2"></div>
+      <div class="grid-item grid-item--width1"></div>
+      <div class="grid-item grid-item--height3"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div> -->
+
+    </div>
+  </section>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="two.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>

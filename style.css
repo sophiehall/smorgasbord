@@ -1,0 +1,461 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.side-panel h1 {
+  position: absolute;
+  margin-left: 28px;
+  margin-top: 40px;
+  font-size: 40px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  transform: rotate(270deg);
+  transform-origin: 37% 300% 0px;
+}
+
+.side-panel {
+  padding: 25px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: 100vh;
+}
+
+.text {
+  max-width: 60%;
+  position: absolute;
+  bottom: 35px;
+}
+
+.side-panel .description {
+  margin-bottom: 35px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  letter-spacing: 0.02em;
+}
+
+.label {
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  margin-top: 20px;
+  font-size: 18px;
+  position: absolute;
+  bottom: 18px;
+}
+
+.label.copyright {
+  bottom: 0;
+  margin-bottom: 30px;
+  position: absolute;
+}
+
+.grid-container {
+  width: 75vw;
+  float: right;
+  padding: 35px;
+  margin: 0 auto;
+}
+
+/* ---- grid ---- */
+.grid {
+  margin: auto;
+  max-width: 1360px;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+.grid-item {
+  padding: 20px;
+  float: right;
+  width: 310px;
+  height: 230px;
+  margin-bottom: 35px;
+  background: #fff;
+  border: 2.5px solid #000;
+  border-color: hsla(0, 0%, 0%, 1);
+  box-shadow: 10px 10px 0px #000;
+}
+
+.grid-item--width2 {
+  width: 600px;
+}
+.grid-item--height2 {
+  height: 350px;
+}
+.grid-item--height3 {
+  height: 400px;
+}
+.grid-item--height3 {
+  height: 500px;
+}
+
+/* Rainbow */
+.rainbow {
+  overflow: hidden;
+  height: 420px;
+}
+
+.rainbow div {
+  padding: 5vw 0;
+  margin: 0;
+  background: skyblue;
+  filter: hue-rotate(45deg);
+}
+
+.rainbow div {
+  transform-origin: top left;
+  animation: huey 5s infinite alternate;
+  transform: skewY(-9deg);
+}
+
+.rainbow > div > div,
+.rainbow > div > div > div > div,
+.rainbow > div > div > div > div > div > div,
+.rainbow > div > div > div > div > div > div > div > div,
+.rainbow > div > div > div > div > div > div > div > div > div > div {
+  transform-origin: bottom right;
+  transform: skewY(9deg);
+}
+
+@keyframes huey {
+  to {
+    filter: hue-rotate(13deg);
+  }
+}
+
+/* rotating lines */
+@keyframes spinning {
+  from,
+  to {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+.lines {
+  border: 2.5px solid black;
+  height: 150px;
+  background-color: rgba(85, 16, 255, 0.24);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin: 6px 0 6px 0;
+}
+
+.line-wrapper {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 65px;
+  margin: 0 20px 0 20px;
+  justify-content: center;
+}
+
+.line-wrapper.animating {
+  background-color: transparent;
+}
+
+.line-wrapper.hovering {
+  background-color: transparent;
+}
+
+.line {
+  width: 40px;
+  height: 2.5px;
+  background-color: #000;
+}
+
+.line-wrapper.animating .line {
+  animation: spinning 2s infinite;
+}
+
+/* slow drip */
+.filters {
+  display: none;
+}
+
+div.drip {
+  position: absolute;
+  width: 30%;
+  top: 40px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-filter: url(#goo);
+  filter: url(#goo);
+}
+
+.drip::before,
+.drip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-left: -50%;
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  background-color: #005cff;
+  border-radius: 50%;
+  -webkit-animation: recoil 5s infinite ease;
+  animation: recoil 5s infinite ease;
+}
+
+.drip::after {
+  width: 60%;
+  padding-bottom: 60%;
+  margin-left: -30%;
+  -webkit-animation: drip 5s infinite ease;
+  animation: drip 5s infinite ease;
+}
+
+@-webkit-keyframes drip {
+  0% {
+    -webkit-transform: scale(1, 0.25) translateY(30vh);
+    transform: scale(1, 0.25) translateY(30vh);
+  }
+  85% {
+    -webkit-transform: scale(1) translateY(30vh);
+    transform: scale(1) translateY(30vh);
+  }
+  100% {
+    -webkit-transform: scale(1, 3) translateY(100vh);
+    transform: scale(1, 3) translateY(100vh);
+  }
+}
+
+@keyframes drip {
+  0% {
+    -webkit-transform: scale(1, 0.25) translateY(30vh);
+    transform: scale(1, 0.25) translateY(30vh);
+  }
+  85% {
+    -webkit-transform: scale(1) translateY(30vh);
+    transform: scale(1) translateY(30vh);
+  }
+  100% {
+    -webkit-transform: scale(1, 3) translateY(100vh);
+    transform: scale(1, 3) translateY(100vh);
+  }
+}
+
+@-webkit-keyframes recoil {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  85% {
+    -webkit-transform: scale(1, 1.25);
+    transform: scale(1, 1.25);
+  }
+  86% {
+    -webkit-transform: scale(1, 0.75);
+    transform: scale(1, 0.75);
+  }
+  90% {
+    -webkit-transform: scale(1, 1.05);
+    transform: scale(1, 1.05);
+  }
+  92% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes recoil {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  85% {
+    -webkit-transform: scale(1, 1.25);
+    transform: scale(1, 1.25);
+  }
+  86% {
+    -webkit-transform: scale(1, 0.75);
+    transform: scale(1, 0.75);
+  }
+  90% {
+    -webkit-transform: scale(1, 1.05);
+    transform: scale(1, 1.05);
+  }
+  92% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+/* zipper */
+div.blobs-bg {
+  margin-bottom: 30px;
+  height: -webkit-fill-available;
+}
+
+.whispir-blobs {
+  height: 100%;
+  background-color: #030416;
+  position: relative;
+}
+
+.whispir-blobs svg {
+  position: absolute;
+}
+
+.red-blob-thumb {
+  animation: red-blob-thumb 60s ease-in-out infinite;
+}
+
+@keyframes red-blob-thumb {
+  0% {
+    -webkit-transform: scale(0.5, 0.5) translate(0, 0);
+    transform: scale(0.5, 0.5) translate(0, 0);
+  }
+  60% {
+    -webkit-transform: scale(0.4, 0.4) translate(120%, 5%) rotate(120deg);
+    transform: scale(0.4, 0.4) translate(120%, 5%) rotate(120deg);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5) translate(0, 0);
+    transform: scale(0.5, 0.5) translate(0, 0);
+  }
+}
+
+.green-blob-thumb {
+  animation: green-blob-thumb 60s ease-in-out infinite;
+}
+
+@keyframes green-blob-thumb {
+  0% {
+    -webkit-transform: scale(0.5, 0.5) translate(90%, 80%);
+    transform: scale(0.5, 0.5) translate(90%, 80%);
+  }
+  60% {
+    -webkit-transform: scale(0.6, 0.6) translate(70%, 120%);
+    transform: scale(0.6, 0.6) translate(70%, 120%);
+  }
+  100% {
+    -webkit-transform: scale(0.5, 0.5) translate(90%, 80%);
+    transform: scale(0.5, 0.5) translate(90%, 80%);
+  }
+}
+
+.yellow-blob-thumb {
+  animation: yellow-blob-thumb 30s ease-in-out infinite;
+}
+
+@keyframes yellow-blob-thumb {
+  0% {
+    -webkit-transform: scale(0.4) translate(4%, 160%);
+    transform: scale(0.4) translate(4%, 160%);
+  }
+  60% {
+    -webkit-transform: scale(0.4, 0.5) translate(8%, 180%) rotate(-90deg);
+    transform: scale(0.4, 0.5) translate(8%, 180%) rotate(-90deg);
+  }
+  100% {
+    -webkit-transform: scale(0.4) translate(4%, 160%);
+    transform: scale(0.4) translate(4%, 160%);
+  }
+}
+
+.orange-blob-thumb {
+  animation: orange-blob-thumb 60s ease-in-out infinite;
+}
+
+@keyframes orange-blob-thumb {
+  0% {
+    -webkit-transform: scale(0.5) translate(170%, 0);
+    transform: scale(0.5) translate(170%, 0);
+  }
+  70% {
+    -webkit-transform: scale(0.7, 0.7) translate(150%, 30%) rotate(90deg);
+    transform: scale(0.7, 0.7) translate(150%, 30%) rotate(90deg);
+  }
+  100% {
+    -webkit-transform: scale(0.5) translate(170%, 0);
+    transform: scale(0.5) translate(170%, 0);
+  }
+}
+
+/* spinning square */
+div.spinning-square-area {
+  background-color: #ffe8b4;
+  height: -webkit-fill-available;
+  margin-bottom: 30px;
+}
+
+div.spinning-square {
+  padding-bottom: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* clock */
+div.clock-bg {
+  background-color: rgb(10, 10, 10);
+  height: -webkit-fill-available;
+  margin-bottom: 30px;
+  }
+  
+  .clock {
+    width: 200px;
+    height: 200px;
+    background: #eeeeee;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .hand {
+    position: absolute;
+    
+    /* default is 12 o'clock, so positioning from the bottom, weirdly! 99px as it's 200px wide but accounting for the 2px hands */
+    bottom: 99px;
+    left: 99px;
+    
+    height: 40px;
+    border-left: 2px solid black;
+    
+    /* make it spin about the bottom of hand, e.g. the center of the clock */
+    transform-origin: 50% 100%;
+  }
+  
+  
+  .hand.minute {
+    height: 70px;
+  }
+  
+  .hand.second {
+    height: 90px;
+    border-color: red;
+  }
+  
+

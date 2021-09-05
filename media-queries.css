@@ -1,0 +1,65 @@
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  .side-panel h1 {
+    margin-left: 0;
+    margin-top: 0;
+    transform: rotate(0);
+    transform-origin: 0;
+}
+
+.side-panel {
+    width: 100vw;
+    height: 40vh;
+}
+
+.text {
+  max-width: 100%;
+  position: absolute;
+  bottom: 35px;
+  padding-right: 30px;
+}
+  
+.label.copyright {
+     position: fixed;
+  }
+
+.side-panel .description {
+  margin-bottom: 35px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 0.02em;
+}
+  
+  .grid-container {
+    width: 100%;
+    margin-top: 0px;
+    float: left;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 35vh;
+    padding-bottom: 60px;
+  }
+  
+  .grid-item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+  
+}
+
+
+/* Medium devices (landscape tablets, 768px to 1080px) */
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+
+}
